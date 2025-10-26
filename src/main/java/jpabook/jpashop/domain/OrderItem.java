@@ -8,13 +8,16 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jpabook.jpashop.domain.item.Item;
+import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import static jakarta.persistence.FetchType.*;
 
 @Entity
 @Getter @Setter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class OrderItem {
     @Id @GeneratedValue
     @Column(name = "order_item_id")
@@ -31,7 +34,6 @@ public class OrderItem {
 
     private int orderPrice; //주문당시 상품 가격
     private int count; //주문 상품 수량
-
     //==생성 메서드==//
 
     public static OrderItem createOrderItem(Item item, int orderPrice, int count) {
