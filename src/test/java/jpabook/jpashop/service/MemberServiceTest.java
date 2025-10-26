@@ -46,4 +46,6 @@ class MemberServiceTest {
         assertThrows(IllegalStateException.class, () -> memberService.join(member2));
         //fail("예외가 발생해야 한다.");
     }
+
+
 }
