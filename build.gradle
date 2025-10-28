@@ -35,6 +35,8 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 	developmentOnly "org.springframework.boot:spring-boot-devtools"
 
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+
 	//쿼리 파라미터 로글 남기는 라이블러리
 	implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.10.0'
 }
