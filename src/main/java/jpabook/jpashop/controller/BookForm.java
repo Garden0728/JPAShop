@@ -8,11 +8,10 @@ import lombok.Setter;
 public class BookForm {
 
     private Long id;
-    @NotEmpty(message = "상품 이름을 필수입니다.")
+    @NotEmpty(message = "상품 이름은 필수입니다.")
     private String name;
     private int price;
     private int stockQuantity;
-
     private String author;
     private String isbn;
 }
